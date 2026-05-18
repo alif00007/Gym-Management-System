@@ -1,0 +1,25 @@
+CREATE TABLE [dbo].[MemberTbl] (
+    [MId]       INT           IDENTITY (1, 1) NOT NULL,
+    [MName]     NVARCHAR (50) NOT NULL,
+    [MPhone]    NVARCHAR (50) NOT NULL,
+    [MGen]      NVARCHAR (6)  NOT NULL,
+    [MAge]      INT           NOT NULL,
+    [MAmount]   INT           NOT NULL,
+    [MTiming]   NVARCHAR (50) NOT NULL,
+    [MPassword] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([MId] ASC)
+);
+
+
+
+CREATE TABLE [dbo].[PaymentTbl] (
+    [PId]           INT            IDENTITY (1, 1) NOT NULL,
+    [PMonth]        NVARCHAR (50)  NOT NULL,
+    [PMember]       NVARCHAR (50)  NOT NULL,
+    [PAmount]       INT            NOT NULL,
+    [PaymentMethod] NVARCHAR (50)  NULL,
+    [TransactionId] NVARCHAR (100) NULL,
+    [PaymentStatus] NVARCHAR (20)  NULL,
+    PRIMARY KEY CLUSTERED ([PId] ASC)
+);
+
