@@ -23,3 +23,12 @@ CREATE TABLE [dbo].[PaymentTbl] (
     PRIMARY KEY CLUSTERED ([PId] ASC)
 );
 
+
+CREATE TABLE [dbo].[AttendanceTbl] (
+    [Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [MemberName] VARCHAR (100) NULL,
+    [AttendDate] DATE          NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
